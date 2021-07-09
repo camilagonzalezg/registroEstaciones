@@ -22,6 +22,15 @@ namespace RegistroEstaciones {
         protected global::System.Web.UI.WebControls.TextBox idTxt;
         
         /// <summary>
+        /// idCV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator idCV;
+        
+        /// <summary>
         /// tipoRb control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,13 @@ namespace RegistroEstaciones {
         protected global::System.Web.UI.WebControls.RadioButtonList capacidadMaximaRb2;
         
         /// <summary>
-        /// FechaVencimiento control.
+        /// FechaVencimientoTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar FechaVencimiento;
+        protected global::System.Web.UI.WebControls.Calendar FechaVencimientoTxt;
         
         /// <summary>
         /// guardarBtn2 control.

@@ -21,8 +21,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
-                        <a class="nav-link" href="VerEstacionesServicio.aspx">Estaciones de Servicio</a>
-                        <a class="nav-link" href="VerPuntosCarga.aspx">Puntos de Carga</a>
+                        <a class="nav-link" href="VerEstacionesServicio.aspx">Ver Estaciones de Servicio</a>
+                        <a class="nav-link" href="RegistrarEstacionServicio.aspx">Registrar Estaciones de Servicio</a>
+                        <a class="nav-link" href="VerPuntosCarga.aspx">Ver Puntos de Carga</a>
+                        <a class="nav-link" href="RegistrarPuntosCarga.aspx">Registrar Puntos de Carga</a>
                     </div>
                 </div>
             </div>

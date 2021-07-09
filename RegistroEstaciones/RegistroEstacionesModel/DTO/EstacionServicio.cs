@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistroEstacionesModel.DTO
+namespace RegistroEstacionesModel
 {
     public class EstacionServicio
     {
-        private int id;
+        private string id;
         private int capacidadMaxima;
         private string region;
 
-        public int Id
+        public string Id
         {
             get
             {

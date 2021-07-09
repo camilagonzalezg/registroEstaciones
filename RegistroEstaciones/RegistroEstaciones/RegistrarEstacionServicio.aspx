@@ -10,8 +10,11 @@
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
-                        <label class="form-label" for="idTxt">Id</label>
+                        <label class="form-label" for="idTxt">Id (Formato: E-01, E-02, etc)</label>
                         <asp:TextBox ID="idTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:CustomValidator ID="idCV" runat="server" ErrorMessage="Debe ingresar solo números"
+                            ValidateEmptyText="true" ControlToValidate="idTxt" OnServerValidate="idCV_ServerValidate"
+                            CssClass="text-danger"></asp:CustomValidator>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="RegionDdl">Region</label>
@@ -28,7 +31,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-grip gap-1">
-                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" />
+                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="guardarBtn_Click" />
                 </div>
             </div>
         </div>

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistroEstacionesModel.DTO
+namespace RegistroEstacionesModel
 {
-    public class PuntoCarga
+    public partial class PuntoCarga
     {
-        private int id;
+        private string id;
         private int tipo;
-        private string capacidadMaxima;
+        private int capacidadMaxima;
         private DateTime fechaVencimiento;
 
-        public int Id
+        public string Id
         {
             get
             {
@@ -39,7 +39,7 @@ namespace RegistroEstacionesModel.DTO
             }
         }
 
-        public string CapacidadMaxima
+        public int CapacidadMaxima
         {
             get
             {

@@ -11,15 +11,15 @@
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
-                        <label class="form-label" for="idTxt">Id</label>
+                        <label class="form-label" for="idTxt">Id (Formato: P-01, P-02, etc)</label>
                         <asp:TextBox ID="idTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar ID"
-                            ControlToValidate="idTxt" CssClass="text-danger"
-                            ></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="idCV" runat="server" ErrorMessage="Debe ingresar formato requerido"
+                            ValidateEmptyText="true" ControlToValidate="idTxt" OnServerValidate="idCV_ServerValidate"
+                            CssClass="text-danger"></asp:CustomValidator>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="tipoRb">TipoRb</label>
+                        <label class="form-label" for="tipoRb">Tipo</label>
                         <asp:RadioButtonList ID="tipoRb" runat="server">
                             <asp:ListItem Value="1" Selected="True" Text="Consumo"></asp:ListItem>
                             <asp:ListItem Value="2" Selected="False" Text="Trafico"></asp:ListItem>
@@ -36,15 +36,13 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="FechaVencimiento">Fecha Vencimiento</label>
-                        <asp:Calendar ID="FechaVencimiento" runat="server" CssClass="form-control"></asp:Calendar>
-                        <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar la Fecha de Vencimiento"
-                            ControlToValidate="FechaVencimiento" CssClass="text-danger"></asp:RequiredFieldValidator>
+                        <label class="form-label" for="FechaVencimientoTxt">Fecha Vencimiento</label>
+                        <asp:Calendar ID="FechaVencimientoTxt" runat="server" CssClass="form-control"></asp:Calendar>
                     </div>
 
                 </div>
                 <div class="card-footer d-grip gap-1">
-                    <asp:Button ID="guardarBtn2" runat="server" Text="Registrar" CssClass="btn btn-primary" />
+                    <asp:Button ID="guardarBtn2" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="guardarBtn2_Click" />
                 </div>
             </div>
         </div>

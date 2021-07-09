@@ -40,14 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\EstacionServicioDAL.cs" />
+    <Compile Include="DAL\PuntoCargaDAL.cs" />
+    <Compile Include="DAL\RegionDAL.cs" />
     <Compile Include="DTO\EstacionServicio.cs" />
     <Compile Include="DTO\PuntoCarga.cs" />
+    <Compile Include="DTO\Region.cs" />
+    <Compile Include="Partials\PuntoCargaPartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
