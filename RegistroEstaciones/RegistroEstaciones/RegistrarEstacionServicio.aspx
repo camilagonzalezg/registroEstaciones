@@ -31,7 +31,8 @@
                     </div>
                 </div>
                 <div class="card-footer d-grip gap-1">
-                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="guardarBtn_Click" />
+                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" 
+                        OnClick="guardarBtn_Click" />
                 </div>
             </div>
         </div>
