@@ -35,12 +35,23 @@ namespace RegistroEstaciones
             
                 PuntoCargaDAL puntoCargaDAL = new PuntoCargaDAL();
                 puntoCargaDAL.Add(pc);
+                //mensaje de exito en creacion de objeto
+                mensajeLbl2.Text = "Punto de Carga creado";
+                //limpiar fields
+                limpiar();
 
             }
             else
             {
 
             }
+        }
+
+        private void limpiar()
+        {
+            idTxt.Text = "";
+            tipoRb.SelectedIndex = 0;
+            capacidadMaximaRb2.SelectedIndex = 0;
         }
 
         protected void idCV_ServerValidate(object source, ServerValidateEventArgs args)

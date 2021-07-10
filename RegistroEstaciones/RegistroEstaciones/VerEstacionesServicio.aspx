@@ -6,22 +6,23 @@
     <div class="row mt-5">
         <div class="col-12 col-md col-lg-4 mx-auto">
 
-                <asp:GridView ID="estacionesServicioGrid" runat="server" AutoGenerateColumns="false"
-                    EmptyDataText="¡Hola! No hay registros de Estaciones de Servicio creados aún."
-                    CssClass="table table-hover" OnRowCommand="estacionesServicioGrid_RowCommand">
-                    <Columns>
-                        <asp:BoundField HeaderText="ID de Estación Servicio" DataField="Id" />
-                        <asp:BoundField HeaderText="Región" DataField="Region" />
-                        <asp:BoundField HeaderText="Capacidad Maxima" DataField="CapacidadMaxima" />
-                        <asp:TemplateField HeaderText="Acción">
+            <asp:GridView ID="estacionesServicioGrid" runat="server" AutoGenerateColumns="false"
+                EmptyDataText="¡Hola! No hay registros de Estaciones de Servicio creados aún."
+                CssClass="table table-hover" OnRowCommand="estacionesServicioGrid_RowCommand">
+                <Columns>
+                    <asp:BoundField HeaderText="ID de Estación Servicio" DataField="Id" />
+                    <asp:BoundField HeaderText="Región" DataField="Region" />
+                    <asp:BoundField HeaderText="Capacidad Maxima" DataField="CapacidadMaxima" />
+                    <asp:TemplateField HeaderText="Acción">
+                        <ItemTemplate>
                             <asp:Button runat="server" Text="Eliminar Registro" CssClass="btn btn-danger"
                                 CommandName="eliminar" CommandArgument='<%# Eval("Id") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
-                        </asp:TemplateField>
-                        
-                    </Columns>
+                </Columns>
 
-                </asp:GridView>
+            </asp:GridView>
 
         </div>
     </div>

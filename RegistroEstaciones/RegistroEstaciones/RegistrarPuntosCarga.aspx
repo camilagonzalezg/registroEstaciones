@@ -4,6 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="row mt-5">
+                <div class="col-12 col-md col-lg-4 mx-auto">
+            <asp:Label ID="mensajeLbl2" runat="server" CssClass="text-success h3"></asp:Label>  
+        </div>
         <div class="col-12 col-md col-lg-4 mx-auto">
             <div class="card">
                 <div class="card-header bg-success text-white">

@@ -41,12 +41,24 @@ namespace RegistroEstaciones
 
                 EstacionServicioDAL estacionServicioDAL = new EstacionServicioDAL();
                 estacionServicioDAL.Add(es);
+                //mensaje de exito en creacion de objeto
+                mensajeLbl1.Text = "Estación de Servicio creada";
+                //limpiar fields
+                limpiar();
 
             }
             else
             {
 
             }
+        }
+
+        //metodo limpiar
+        private void limpiar()
+        {
+            idTxt.Text = "";
+            capacidadMaximaRb1.SelectedIndex = 0;
+            RegionDdl.SelectedIndex = 0;
         }
 
         protected void idCV_ServerValidate(object source, ServerValidateEventArgs args)
