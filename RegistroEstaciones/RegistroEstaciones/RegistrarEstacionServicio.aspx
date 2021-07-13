@@ -2,11 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <div class="row mt-5">
-        <div class="col-12 col-md col-lg-4 mx-auto">
-            <asp:Label ID="mensajeLbl1" runat="server" CssClass="text-success h3"></asp:Label>  
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+            <asp:Label ID="mensajeLbl1" runat="server" CssClass="text-success h3"></asp:Label>
         </div>
-        <div class="col-12 col-md col-lg-4 mx-auto">
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
             <div class="card">
                 <div class="card-header bg-success text-white">
                     <h5>Registro de Estaciones de Servicio</h5>
@@ -34,7 +36,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-grip gap-1">
-                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary" 
+                    <asp:Button ID="guardarBtn" runat="server" Text="Registrar" CssClass="btn btn-primary"
                         OnClick="guardarBtn_Click" />
                 </div>
             </div>
