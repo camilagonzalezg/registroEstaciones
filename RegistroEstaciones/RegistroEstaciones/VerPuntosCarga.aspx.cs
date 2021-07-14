@@ -62,5 +62,51 @@ namespace RegistroEstaciones
             }
 
         }
+
+        protected void puntosCargaGrid_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            puntosCargaGrid.EditIndex = -1;
+            CargarTabla(puntoCargaDAL.GetAll());
+
+        }
+
+        protected void puntosCargaGrid_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            puntosCargaGrid.EditIndex = e.NewEditIndex;
+            CargarTabla(puntoCargaDAL.GetAll());
+        }
+
+        protected void puntosCargaGrid_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow fila = puntosCargaGrid.Rows[e.RowIndex];
+
+            int id = Convert.ToInt32(puntosCargaGrid.DataKeys[e.RowIndex].Values[0]);
+
+            int tipo = Convert.ToInt32((fila.FindControl("txtTipo") as TextBox).Text);
+            int capacidadMaxima = Convert.ToInt32((fila.FindControl("txtCapacidadMaxima") as TextBox).Text);
+            //DateTime fechaVencimiento = ((fila.FindControl("txtFechaVencimiento") as TextBox).SelectedValue);
+
+            //PuntoCarga p = puntoCargaDAL.GetAll(id);
+
+            //p.Tipo = tipo;
+            //p.CapacidadMaxima = capacidadMaxima;
+           // p.FechaVencimiento = fechaVencimiento;
+            
+
+            //puntoCargaDAL.Update(p);
+
+            puntosCargaGrid.EditIndex = -1;
+            CargarTabla(puntoCargaDAL.GetAll());
+        }
+
+        protected void puntosCargaGrid_RowDataBoundEvent(object sender, GridViewRowEventArgs e)
+        {
+            if(e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex == puntosCargaGrid.EditIndex)
+            {
+                DropDownList lista = e.Row.FindControl("txtfechaVencimiento") as DropDownList;
+               // lista.DataSource = puntosCarga.GetAll();
+                lista.DataBind();
+            }
+        }
     }
 }
